@@ -1,0 +1,139 @@
+/* Основные стили */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 3px solid #0056b3;
+}
+
+header .logo {
+    max-width: 150px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+main {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #0056b3;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: disc inside;
+    margin-bottom: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 3px solid #0056b3;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Стили для каталога товаров */
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.products li {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    list-style: none;
+}
+
+.products li img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.products li p {
+    margin-top: 10px;
+}
+
+/* Медиазапросы для адаптивного дизайна */
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .products li {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .products li {
+        width: 100%;
+    }
+}
