@@ -4,219 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Фармкомпания</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            border-bottom: 3px solid #388E3C;
+        }
+
+        .header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header_content {
+            display: flex;
+            align-items: center;
+        }
+
+        .header_content .logo {
+            max-width: 80px;
+            margin-right: 20px;
+        }
+
+        .header_title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav_list {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            background-color: #2E7D32;
+            padding: 10px 0;
+            margin-top: 10px;
+        }
+
+        .nav_list li {
+            margin: 0 10px;
+        }
+
+        .nav_list li a {
+            color: white;
+            font-weight: bold;
+        }
+
+        .nav_list li a:hover {
+            color: #FFD700;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    <style>
-        /* Основные стили */
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-header {
-    background-color: #007BFF;
-    color: white;
-    padding: 20px 0;
-    border-bottom: 3px solid #0056b3;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-header .logo {
-    max-width: 150px;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: white;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: #ffd700;
-}
-
-main {
-    padding: 20px 0;
-    background-color: #fff;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-section {
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-section img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-section h2 {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-    color: #007BFF;
-}
-
-section p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    text-align: justify;
-    color: #333;
-}
-
-footer {
-    background-color: #007BFF;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    border-top: 3px solid #0056b3;
-}
-
-footer .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-footer p {
-    font-size: 0.9em;
-    margin: 10px 0;
-}
-
-footer ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-}
-
-footer ul li {
-    margin-left: 20px;
-}
-
-footer ul li a {
-    color: white;
-}
-
-footer ul li a:hover {
-    color: #ffd700;
-}
-
-/* Медиазапросы для адаптивного дизайна */
-
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin-left: 0;
-        margin-top: 10px;
-    }
-    
-    footer .container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-    </style>
-    <header>
+    <header class="header">
         <div class="container">
-            <img src="images/logo.png" alt="Логотип" class="logo">
+            <div class="header_content">
+                <img src="images/logo.png" alt="Логотип" class="logo">
+                <h1 class="header_title">Фармкомпания</h1>
+            </div>
             <nav>
-                <ul>
+                <ul class="nav_list">
                     <li><a href="index.html">Главная</a></li>
                     <li><a href="about.html">О компании</a></li>
-                    <li><a href="products.html">Каталог</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
                     <li><a href="contact.html">Контакты</a></li>
+                    <li><a href="activity.html">Деятельность</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <main>
-        <div class="container">
-            <section>
-                <h2>Про компанию</h2>
-                <img src="images/placeholder1.jpg" alt="Про компанию">
-                <p>Описание компании. Краткое введение в деятельность компании, её миссия и ценности.</p>
-            </section>
-            <section>
-                <h2>Наши продукты</h2>
-                <img src="images/placeholder2.jpg" alt="Наши продукты">
-                <p>Описание продуктов компании. Информация о производимых товарах, их качествах и преимуществах.</p>
-            </section>
-            <section>
-                <h2>Наши услуги</h2>
-                <img src="images/placeholder3.jpg" alt="Наши услуги">
-                <p>Описание услуг компании. Перечень предоставляемых услуг, их особенности и преимущества.</p>
-            </section>
-            <section>
-                <h2>Контакты</h2>
-                <img src="images/placeholder4.jpg" alt="Контакты">
-                <p>Контактная информация. Адреса, телефоны и другие способы связи с компанией.</p>
-            </section>
-        </div>
+    <main class="container">
+        <h2>Добро пожаловать в Фармкомпанию</h2>
+        <p>Описание компании и основной информации о ней.</p>
     </main>
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Фармкомпания. Все права защищены.</p>
-            <ul>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Instagram</a></li>
-            </ul>
-        </div>
-    </footer>
 </body>
 </html>

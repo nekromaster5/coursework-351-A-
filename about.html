@@ -1,29 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О компании - Фармкомпания</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            border-bottom: 3px solid #388E3C;
+        }
+
+        .header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header_content {
+            display: flex;
+            align-items: center;
+        }
+
+        .header_content .logo {
+            max-width: 80px;
+            margin-right: 20px;
+        }
+
+        .header_title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav_list {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            background-color: #2E7D32;
+            padding: 10px 0;
+            margin-top: 10px;
+        }
+
+        .nav_list li {
+            margin: 0 10px;
+        }
+
+        .nav_list li a {
+            color: white;
+            font-weight: bold;
+        }
+
+        .nav_list li a:hover {
+            color: #FFD700;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <img src="images/logo.png" alt="Логотип" class="logo">
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">О компании</a></li>
-                <li><a href="products.html">Каталог</a></li>
-                <li><a href="contact.html">Контакты</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="container">
+            <div class="header_content">
+                <img src="images/logo.png" alt="Логотип" class="logo">
+                <h1 class="header_title">Фармкомпания</h1>
+            </div>
+            <nav>
+                <ul class="nav_list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="contact.html">Контакты</а></li>
+                    <li><a href="activity.html">Деятельность</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <h1>О нашей компании</h1>
-        <p>Наша фармкомпания была основана в 2020 году с целью обеспечить доступность качественных лекарственных препаратов для всех.</p>
+    <main class="container">
+        <h2>О компании</h2>
+        <p>Информация о компании, её миссия и ценности.</p>
     </main>
-    <footer>
-        <p>&copy; 2024 Фармкомпания. Все права защищены.</p>
-    </footer>
 </body>
 </html>
